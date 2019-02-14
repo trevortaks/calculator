@@ -22,88 +22,95 @@ namespace CalculatorTut
     {
         double var1, var2, answer;
         string operand;
+        bool answered;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void btnClick(string number) {
+            if (!answered)
+            {
+                txtAnswer.Text = txtAnswer.Text + number;
+            }
+            else {
+                txtAnswer.Text = number;
+                answered = false;
+            }
+        }
+
         private void btnOne_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '1';
+            btnClick("1");
         }
 
 
         private void btnThree_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '3';
+            btnClick("3");
         }
 
         private void btnFour_Click(object sender, RoutedEventArgs e) {
-            txtAnswer.Text = txtAnswer.Text + '4';
+            btnClick("4");
         }
 
         private void btnFive_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '5';
+            btnClick("5");
         }
 
         private void btnSix_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '6';
+            btnClick("6");
         }
 
         private void btnSeven_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '7';
+            btnClick("7");
         }
 
         private void btnEight_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '8';
+            btnClick("8");
         }
 
         private void btnNine_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '9';
+            btnClick("9");
         }
 
         private void btnTwo_Click(object sender, RoutedEventArgs e)
         {
             //var1 = Convert.ToDouble(txtAnswer.Text);
-            txtAnswer.Text = txtAnswer.Text + '2';
+            btnClick("2");
+        }
+
+        private void Operand(string operate) {
+            var1 = Convert.ToDouble(txtAnswer.Text);
+            txtVars.Text = txtAnswer.Text + operate;
+            operand = operate;
+            txtAnswer.Text = "";
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
-            var1 = Convert.ToDouble(txtAnswer.Text);
-            txtVars.Text = txtAnswer.Text + " + ";
-            operand = "+";
-            txtAnswer.Text = "";
+            Operand("+");
         }
 
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
-            var1 = Convert.ToDouble(txtAnswer.Text);
-            txtVars.Text = txtAnswer.Text + " - ";
-            operand = "-";
-            txtAnswer.Text = "";
+            Operand("-");
         }
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            var1 = Convert.ToDouble(txtAnswer.Text);
-            txtVars.Text = txtAnswer.Text + " / ";
-            operand = "/";
-            txtAnswer.Text = "";
+            Operand("/");
         }
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-            var1 = Convert.ToDouble(txtAnswer.Text);
-            txtVars.Text = txtAnswer.Text + " * ";
-            operand = "*";
-            txtAnswer.Text = "";
+            Operand("*");
         }
 
         private void btnEqual_Click(object sender, RoutedEventArgs e)
@@ -115,7 +122,11 @@ namespace CalculatorTut
                     answer = var1 * var2;
                     break;
                 case "/":
-                    answer = var1 / var2;
+                    if(var2 == 0){
+                        txtAnswer.Text = "Error 1 : Can't Divide By Zero";
+                    }else{
+                        answer = var1 / var2;
+                    }
                     break;
                 case "+":
                     answer = var1 + var2;
@@ -126,11 +137,12 @@ namespace CalculatorTut
             };
 
             txtAnswer.Text = Convert.ToString(answer);
+            answered = true;
         }
 
         private void btnZero_Click(object sender, RoutedEventArgs e)
         {
-            txtAnswer.Text = txtAnswer.Text + '0';
+            btnClick("0");
         }
 
         private void btnPoint_Click(object sender, RoutedEventArgs e)
@@ -140,6 +152,16 @@ namespace CalculatorTut
             }else{
                 txtAnswer.Text = txtAnswer.Text + '.';
             }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtAnswer.Text = txtVars.Text = "";
+        }
+
+        private void btnClearEntry_Click(object sender, RoutedEventArgs e)
+        {
+            txtAnswer.Text = "";
         }
     }
 }

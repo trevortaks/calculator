@@ -15,7 +15,7 @@
         <Button Name="btnOne" Background="#FF7C7B7B" Content="1" HorizontalAlignment="Left" Margin="25,200,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnOne_Click"/>
         <Button Name="btnTwo" Background="#FF7C7B7B" Content="2" HorizontalAlignment="Left" Margin="125,200,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnTwo_Click"/>
         <Button Name="btnThree" Background="#FF7C7B7B" Content="3" HorizontalAlignment="Left" Margin="225,200,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnThree_Click"/>
-        <Button Name="btnEqual" Background="#FF7C7B7B" Content="=" HorizontalAlignment="Left" Margin="325,360,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnEqual_Click"></Button>
+        <Button Name="btnEqual" Background="#FF7C7B7B" Content="=" HorizontalAlignment="Left" Margin="325,360,0,0" VerticalAlignment="Top" Width="65" Height="50" Click="btnEqual_Click"></Button>
         <Button Name="btnSix" Background="#FF7C7B7B" Content="6" HorizontalAlignment="Left" Margin="225,280,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnSix_Click"/>
         <Button Name="btnFive" Background="#FF7C7B7B" Content="5" HorizontalAlignment="Left" Margin="125,280,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnFive_Click"/>
         <Button Name="btnFour" Background="#FF7C7B7B" Content="4" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnFour_Click"/>
@@ -26,7 +26,10 @@
         <Button x:Name="btnMinus" Background="#FF7C7B7B" Content="-" HorizontalAlignment="Left" Margin="143,440,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.112,-0.919" Height="50" FontSize="24" Click="btnMinus_Click"/>
         <Button x:Name="btnDivide" Background="#FF7C7B7B" Content="/" HorizontalAlignment="Left" Margin="267,440,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.112,-0.919" Height="50" FontSize="24" Click="btnDivide_Click"/>
         <Button x:Name="btnMultiply" Background="#FF7C7B7B" Content="*" HorizontalAlignment="Left" Margin="385,440,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.112,-0.919" Height="50" FontSize="24" Click="btnMultiply_Click"/>
-        <Button x:Name="btnZero" Background="#FF7C7B7B" Content="0" HorizontalAlignment="Left" Margin="325,200,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnZero_Click"/>
-        <Button x:Name="btnPoint" Background="#FF7C7B7B" Content="." HorizontalAlignment="Left" Margin="325,280,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnPoint_Click"/>
+        <Button x:Name="btnZero" Background="#FF7C7B7B" Content="0" HorizontalAlignment="Left" Margin="325,200,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnZero_Click"/>
+        <Button x:Name="btnPoint" Background="#FF7C7B7B" Content="." HorizontalAlignment="Left" Margin="325,280,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.112,-0.919" Height="50" Click="btnPoint_Click"/>
+        <Button Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="413,200,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="btnClear_Click"/>
+        <Button Name="btnClearEntry" Content="CE" HorizontalAlignment="Left" Margin="413,280,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="btnClearEntry_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="413,360,0,0" VerticalAlignment="Top" Width="75" Height="50"/>
     </Grid>
 </Window>
